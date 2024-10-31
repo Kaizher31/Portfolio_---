@@ -455,6 +455,8 @@ button:focus { outline: 1px solid var(--color-accent);}
 
 @media screen and (max_width: 768px) {
     body{ 
+        flex-direction: column;
+        flex-direction: row;
         display: flex;
         justify-content: center;
         padding: 0;
@@ -462,11 +464,13 @@ button:focus { outline: 1px solid var(--color-accent);}
     /* Header */
     .header {
         flex-direction: column;
-        flex-direction: row;
-        align-items: center;
-        padding: 1rem;
+        align-items: flex-start;
+        padding: 10px;
     }
-
+    .header__nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
     .header__menu {
         flex-direction: column;
         flex-direction: row;
@@ -482,10 +486,12 @@ button:focus { outline: 1px solid var(--color-accent);}
 
     .home__title {
         font-size: 2rem;
+        text-align: center;
     }
 
     .home__description {
         font-size: 1.2rem;
+        font-size: 18px;
     }
 
     /* About */
@@ -498,6 +504,7 @@ button:focus { outline: 1px solid var(--color-accent);}
 
     /* Skills */
     .skills {
+        
         grid-template-columns: 1fr;
         padding: 1rem;
     }
@@ -516,7 +523,24 @@ button:focus { outline: 1px solid var(--color-accent);}
     .licenses {
         margin: 1.5rem;
     }
+    .projects, .licenses {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        gap: 15px;
+    }
+    .section {
+        padding: 20px;
+    }
 
+    .title {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 16px;
+        text-align: center;
+    }
 }
 
 
